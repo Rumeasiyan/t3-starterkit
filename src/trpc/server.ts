@@ -25,7 +25,6 @@ const getQueryClient = cache(createQueryClient);
 const caller = createCaller(createContext);
 
 export const { trpc: api, HydrateClient } = createHydrationHelpers<AppRouter>(
-  // @ts-expect-error - tRPC RSC helper has incorrect type inference
   caller,
   getQueryClient
 );

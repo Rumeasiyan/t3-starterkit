@@ -24,7 +24,12 @@
       "version": "detect"
     }
   },
-  "plugins": ["@typescript-eslint", "react", "react-hooks", "@tanstack/query"],
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "react-hooks",
+    "@tanstack/query"
+  ],
   "rules": {
     // React specific rules
     "react/react-in-jsx-scope": "off",
@@ -59,10 +64,16 @@
     "no-console": [
       "warn",
       {
-        "allow": ["warn", "error"]
+        "allow": [
+          "warn",
+          "error"
+        ]
       }
     ],
-    "eqeqeq": ["error", "always"],
+    "eqeqeq": [
+      "error",
+      "always"
+    ],
     "no-duplicate-imports": "error",
     "no-unused-private-class-members": "error",
     "no-promise-executor-return": "error",
@@ -78,6 +89,8 @@
     "*.config.js",
     "*.config.ts",
     "src/server/auth/config.ts",
-    "src/components/ui/**/*"
+    "src/components/ui/**/*",
+    "src/server/api/routers/**/*",
+    "src/trpc/**/*"
   ]
 }

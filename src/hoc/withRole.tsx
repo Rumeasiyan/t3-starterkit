@@ -1,5 +1,7 @@
-import UnauthorizedPopup from '@/app/components/global/UnauthorizedPopup';
-import Loading from '@/app/components/global/Loading';
+'use client';
+
+import UnauthorizedPopup from '@/app/_components/global/UnauthorizedPopup';
+import Loading from '@/app/_components/global/Loading';
 import { useSession } from 'next-auth/react';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';

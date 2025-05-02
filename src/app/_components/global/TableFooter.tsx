@@ -1,4 +1,4 @@
-import type { TableFooterProps } from '@/app/components/global/TableFooterProps';
+import type { TableFooterProps } from '@/app/_components/global/TableFooterProps';
 import { Button } from '@/components/ui/button';
 import {
   Select,

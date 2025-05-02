@@ -55,10 +55,19 @@ cp .env.example .env
 
 ```bash
 # Generate Prisma Client
-npm run db:generate
+npx prisma generate
 
 # Push the database schema
-npm run db:push
+npx prisma db push
+
+# Run fresh migrations (if applicable)
+npx prisma migrate dev --name init
+
+# Open Prisma Studio
+npx prisma studio
+
+# Seed the database (if applicable)
+npx prisma db seed
 ```
 
 5. Start the development server:

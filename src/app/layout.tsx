@@ -1,9 +1,9 @@
 import '@/styles/globals.css';
 
 import { type Metadata } from 'next';
-import { Geist } from 'next/font/google';
-
-import { TRPCReactProvider } from '@/trpc/react';
+import { Inter } from 'next/font/google';
+import { Providers } from './provider';
+import { Toaster } from '@/components/ui/sonner';
 
 export const metadata: Metadata = {
   title: 'Create T3 App',
@@ -11,10 +11,7 @@ export const metadata: Metadata = {
   icons: [{ rel: 'icon', url: '/favicon.ico' }],
 };
 
-const geist = Geist({
-  subsets: ['latin'],
-  variable: '--font-geist-sans',
-});
+const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({
   children,
@@ -22,10 +19,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geist.variable}`}
+      suppressHydrationWarning
     >
-      <body>
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+      <body
+        className={inter.className}
+        suppressHydrationWarning
+      >
+        <Providers>
+          {children}
+          <Toaster theme="light" />
+        </Providers>
       </body>
     </html>
   );

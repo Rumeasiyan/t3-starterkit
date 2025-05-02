@@ -1,4 +1,6 @@
-import Loading from '@/app/components/global/Loading';
+'use client';
+
+import Loading from '@/app/_components/global/Loading';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
@@ -10,7 +12,7 @@ const withAuth = <P extends object>(Component: React.ComponentType<P>) => {
 
     useEffect(() => {
       if (status === 'unauthenticated') {
-        router.push('/auth/signin');
+        router.push('/login');
       }
     }, [status, router]);
 

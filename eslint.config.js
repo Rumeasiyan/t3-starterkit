@@ -14,6 +14,8 @@ export default tseslint.config(
       'src/components/ui/*.tsx',
       'src/components/ui/**/*.tsx',
       'src/server/auth/config.ts',
+      'src/server/api/routers/**/*.ts',
+      'src/trpc/**/*',
     ],
   },
   ...compat.extends('next/core-web-vitals'),
